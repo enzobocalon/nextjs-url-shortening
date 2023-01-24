@@ -1,4 +1,3 @@
-import theme from '@/styles/theme';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -20,10 +19,19 @@ export const Wrapper = styled.div`
     filter: contrast(0) brightness(2);
     max-width: 150px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const MenuColumn = styled.div`
-
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-block: 1rem;
+  }
 `;
 
 export const MenuTitle = styled.h4`

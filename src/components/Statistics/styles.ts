@@ -30,7 +30,7 @@ export const Description = styled.p`
 export const Cards = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2.75rem;
   margin-top: 4rem;
   position: relative;
@@ -46,8 +46,18 @@ export const Cards = styled.div`
   ::after {
     content: '';
     position: absolute;
-    width: 60%;
+    width: 100%;
     height: 6px;
     background-color: ${({theme}) => theme.cyan};
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    ::after {
+      transform: rotate(90deg);
+      top: 50%;
+      min-width: 500px;
+    }
   }
 `;

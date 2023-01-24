@@ -2,12 +2,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: white;
-  max-width: 400px;
   position: relative;
+  max-width: 400px;
   border-radius: .5rem;
   padding: 2.5rem;
   z-index: 1;
   flex: 1;
+
+  @media (max-width: 920px) {
+    padding: 2.5rem 1rem;
+  }
 `;
 
 export const IconContainer = styled.div`

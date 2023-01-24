@@ -20,4 +20,10 @@ export const Wrapper = styled.div`
     color: white;
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 `;

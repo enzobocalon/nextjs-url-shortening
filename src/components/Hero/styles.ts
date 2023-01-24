@@ -4,7 +4,7 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   padding: 2rem;
   max-width: 1440px;
   margin: 0 auto;
@@ -39,6 +39,12 @@ export const Title = styled.h1`
   @media (max-width: 1100px) {
     font-size: 3rem;
     line-height: 3.65rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 2rem;
+    line-height: 2.65rem;
+    margin-top: 1rem;
   }
 `;
 

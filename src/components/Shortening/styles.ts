@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import desktopBg from '../../assets/bg-shorten-desktop.svg';
+import mobileBg from '../../assets/bg-shorten-mobile.svg';
 
 export const Container = styled.div`
   width: 100%;
@@ -29,7 +30,18 @@ export const Wrapper = styled.div`
     flex: 1;
     min-width: 200px;
     padding: 1rem;
+    }
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      background-image: url(${mobileBg.src});
+      > * {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 425px) {
+      padding: 3rem 2rem;
     }
 `;
 
