@@ -10,7 +10,7 @@ export default function Header() {
 
 	return (
 		<S.Container>
-			<img src={logo.src} />
+			<img src={logo.src} alt='logo'/>
 			<S.MainMenu openMenu={openMenu}>
 				<S.Menu>
 					<S.MenuItem>

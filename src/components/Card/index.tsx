@@ -10,7 +10,7 @@ export default function Card({title, description, image}: Props) {
 	return (
 		<S.Container>
 			<S.IconContainer>
-				<img src={image} />
+				<img src={image} alt='card content'/>
 			</S.IconContainer>
 			<S.Content>
 				<S.Title>

@@ -18,7 +18,7 @@ export default function Hero() {
 				</Button>
 			</S.Content>
 			<S.Image>
-				<img src={hero.src} />
+				<img src={hero.src} alt='hero working person'/>
 			</S.Image>
 		</S.Container>
 	);

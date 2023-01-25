@@ -10,7 +10,7 @@ export default function Footer() {
 	return (
 		<S.Container>
 			<S.Wrapper>
-				<img src={logo.src} />
+				<img src={logo.src} alt='logo'/>
 				<S.MenuColumn>
 					<S.MenuTitle>
             Features
@@ -58,10 +58,10 @@ export default function Footer() {
 				</S.MenuColumn>
 
 				<S.Social>
-					<img src={facebook.src} />
-					<img src={twitter.src} />
-					<img src={pinterest.src} />
-					<img src={instagram.src} />
+					<img src={facebook.src} alt='facebook icon'/>
+					<img src={twitter.src} alt='twitter icon'/>
+					<img src={pinterest.src} alt='pinterest icon'/>
+					<img src={instagram.src} alt='instagram icon'/>
 				</S.Social>
 			</S.Wrapper>
 		</S.Container>
