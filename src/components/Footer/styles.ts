@@ -45,6 +45,12 @@ export const MenuItem = styled.div`
 
   margin-block: .5rem;
   cursor: pointer;
+  transition: all .3s ease;
+
+  :hover {
+    color: ${({theme}) => theme.cyan};
+    transition: all .3s ease;
+  }
 `;
 
 export const Social = styled.div`

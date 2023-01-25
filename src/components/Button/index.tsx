@@ -5,13 +5,15 @@ interface Props {
   onClick?: () => void;
   children: ReactNode
   rounded?: 'rounded' | 'semi-rounded'
+  active?: boolean
 }
 
-export default function Button({onClick, children, rounded}: Props) {
+export default function Button({onClick, children, rounded, active}: Props) {
 	return (
 		<S.Button
 			onClick={onClick}
-			rounded={rounded}>
+			rounded={rounded}
+			active={active}>
 			{children}
 		</S.Button>
 	);

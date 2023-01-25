@@ -10,14 +10,19 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  padding-block: 12rem 4rem;
+  padding-block: 8rem 4rem;
   padding-inline: 2rem;
+
+  @media (max-width: 768px) {
+    padding-block: 12rem 4rem;
+  }
 `;
 
 export const Title = styled.h2`
   color: ${({theme}) => theme.veryDarkBlue};
   font-size: 2.5rem;
   letter-spacing: -.03ch;
+  margin-top: 2rem;
 `;
 
 export const Description = styled.p`
@@ -60,4 +65,8 @@ export const Cards = styled.div`
       min-width: 500px;
     }
   }
+`;
+
+export const Link = styled.div`
+
 `;

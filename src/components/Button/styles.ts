@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 interface Props {
   rounded?: string;
+  active?: boolean;
 }
 
 export const Button = styled.button<Props>`
-  background-color: ${({theme}) => theme.cyan};
+  background-color: ${({theme, active}) => active ? theme.darkViolet : theme.cyan};
   padding: .5rem 1.5rem;
   color: white;
   font-weight: bold;

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface Props {
+  openMenu: boolean
+}
+
 export const Container = styled.header`
   display: flex;
   align-items: center;
@@ -13,21 +17,44 @@ export const Container = styled.header`
     display: none;
   }
 
+  img {
+    max-width: 100px;
+    margin-right: 1rem;
+  }
+
   @media (max-width: 768px) {
     svg {
       display: block;
       min-width: 50px;
+      position: relative;
     }
   }
 `;
 
-export const MainMenu = styled.div`
+export const MainMenu = styled.div<Props>`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   gap: 2.5rem;
 
-  img {
-    max-width: 100px;
+  @media (max-width: 768px) {
+    opacity: ${({openMenu}) => openMenu ? 1 : 0};
+    pointer-events: ${({openMenu}) => openMenu ? 'all' : 'none'};
+    background-color: ${({theme}) => theme.darkViolet};
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 2.25rem;
+    max-width: 250px;
+    z-index: 100;
+    padding-block: 2rem;
+    border-radius: 1rem;
+    transition: all .3s ease;
+
+    button {
+      width: 100%;
+    }
   }
 `;
 
@@ -37,7 +64,7 @@ export const Menu = styled.ul`
   gap: 1.5rem;
 
   @media (max-width: 768px) {
-    display: none;
+    flex-direction: column;
   }
 `;
 
@@ -54,6 +81,14 @@ export const MenuItem = styled.li`
     color: ${({theme}) => theme.darkViolet};
     transition: all .3s ease;
   }
+
+  @media (max-width: 768px) {
+    color: white;
+
+    :hover {
+      color: ${({theme}) => theme.cyan};
+    }
+  }
 `;
 
 export const UserMenu = styled.div`
@@ -62,7 +97,8 @@ export const UserMenu = styled.div`
   gap: 1.5rem;
 
   @media (max-width: 768px) {
-    opacity: 0;
-    pointer-events: none;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 2rem;
   }
 `;

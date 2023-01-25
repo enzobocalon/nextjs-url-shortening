@@ -4,11 +4,13 @@ import detailedRecords from '../../assets/icon-detailed-records.svg';
 import fullyCustomizable from '../../assets/icon-fully-customizable.svg';
 
 import Card from '../Card';
+import Links from '../Links';
 
 export default function Statistics() {
 	return (
 		<S.Container>
 			<S.Wrapper>
+				<Links />
 				<S.Title>
           Advanced Statistics
 				</S.Title>

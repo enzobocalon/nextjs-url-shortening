@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import desktopBg from '../../assets/bg-shorten-desktop.svg';
 import mobileBg from '../../assets/bg-shorten-mobile.svg';
 
+interface Props {
+  error: string
+}
+
 export const Container = styled.div`
   width: 100%;
   max-width: 1440px;
@@ -23,12 +27,13 @@ export const Wrapper = styled.div`
   left: 0;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 
   button {
     flex: 1;
     min-width: 200px;
+    min-height: 69px;
     padding: 1rem;
     }
 
@@ -45,12 +50,24 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Input = styled.input`
+export const InputContainer = styled.div`
+  flex: 1 0 60%
+`;
+
+export const Input = styled.input<Props>`
   padding: 1.25rem;
-  flex: 1 0 60%;
+  width: 100%;
   border-radius: 8px;
   border: none;
   outline: none;
   font-size: 1rem;
   font-family: inherit;
+  border: ${({error, theme}) => error ? `4px solid ${theme.red}` : '4px solid transparent'};
+`;
+
+export const Error = styled.span`
+  margin-top: .5rem;
+  color: ${({theme}) => theme.red};
+  font-size: .8rem;
+  font-style: italic;
 `;
